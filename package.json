@@ -1,0 +1,22 @@
+{
+  "name": "truffle-meet2",
+  "version": "0.0.1",
+  "description": "",
+  "main": "truffle-config.js",
+  "scripts": {
+    "compile": "truffle compile",
+    "network": "ganache-cli",
+    "network:docker": "docker run -d -p 8545:8545 trufflesuite/ganache-cli:latest",
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatiasOS/truffle-meet2.git"
+  },
+  "author": "Matias Oveja Smith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MatiasOS/truffle-meet2/issues"
+  },
+  "homepage": "https://github.com/MatiasOS/truffle-meet2#readme"
+}
