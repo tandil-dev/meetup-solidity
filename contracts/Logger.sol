@@ -1,4 +1,4 @@
-pragma solidity >=0.5.0 <0.6.0;
+pragma solidity >=0.4.0 <0.6.0;
 
 contract Logger {
   address public owner;
@@ -18,5 +18,9 @@ contract Logger {
   function store(uint someNumber) public onlyOwner {
 		savedNumber = someNumber;
     emit stored(msg.sender, someNumber);
+  }
+
+  function updateOwner(address newOwner) public onlyOwner {
+    owner = newOwner;
   }
 }

@@ -18,5 +18,19 @@ contract("Logger", async accounts => {
 		await logger.store(amountOfEmpanadasThatFrancoWantsToEat, { from: franco });
 		const savedNumber = await logger.savedNumber.call()
 		assert.equal(savedNumber, amountOfEmpanadasThatMatiWantsToEat);
+	});
+
+	it("Should allow to update owner", async () => {
+    const logger = await Logger.deployed();
+		await logger.updateOwner(franco, { from: mati });
+		const owner = await logger.owner.call();
+		assert.equal(owner, franco);
+	});
+	
+	it("Should allow to update owner", async () => {
+    const logger = await Logger.deployed();
+		await logger.store(amountOfEmpanadasThatFrancoWantsToEat, { from: franco });
+		const savedNumber = await logger.savedNumber.call()
+		assert.equal(savedNumber, amountOfEmpanadasThatFrancoWantsToEat);
   });
 });
