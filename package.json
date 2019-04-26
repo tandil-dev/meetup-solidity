@@ -5,6 +5,7 @@
   "main": "truffle-config.js",
   "scripts": {
     "compile": "truffle compile",
+    "deploy:ropsten": "truffle migrate --network ropsten",
     "network": "ganache-cli",
     "network:docker": "docker run -d -p 8545:8545 trufflesuite/ganache-cli:latest",
     "test": "truffle test"
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/MatiasOS/truffle-meet2/issues"
   },
-  "homepage": "https://github.com/MatiasOS/truffle-meet2#readme"
+  "homepage": "https://github.com/MatiasOS/truffle-meet2#readme",
+  "dependencies": {
+    "truffle-hdwallet-provider": "^1.0.8"
+  }
 }
